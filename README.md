@@ -1,1 +1,1 @@
-# gratutde-garden
+# gratitude garden
