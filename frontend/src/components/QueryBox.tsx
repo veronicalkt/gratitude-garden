@@ -16,7 +16,6 @@ import {
   createLikeService,
 } from "../services/backend-service";
 import ExpandableText from "./ExpandableText";
-import Like from "./Like";
 
 // This defines the schema for the form used, expand here for form input validation
 const schema = z.object({
@@ -106,7 +105,6 @@ const QueryBox = () => {
             className="form-control"
           />
           <button className="btn btn-primary">Submit</button>
-          {query && <Like color="red" onClick={onLike} />}
         </div>
         <div></div>
       </form>

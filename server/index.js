@@ -18,8 +18,8 @@ const PARENTAL_CONTEXT = [{"role": "user", "content": "It should be assumed you 
 }];
 
 // This message history is injected as context to enable "parental control" in following responses
-const POEM_CONTEXT = [{"role": "user", "content": "You should only respond in rhyming poem format."}, {
-  "role": "assistant", "content": "I only respond in poems."
+const POEM_CONTEXT = [{"role": "user", "content": "You should only respond in journaling pormpts that the user can respond to ."}, {
+  "role": "assistant", "content": "I only respond in journaling prompts."
 }];
 
 const app = express();  // Server is instantiated
