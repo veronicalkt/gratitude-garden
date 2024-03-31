@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./App.css";
-
+import imagePlants from "./images/plant.png"
 import QueryBox from "./components/QueryBox";
 
 function App() {
   return (
     <div>
+      <img src = {imagePlants} width={250}/>
       <QueryBox />
       <br />
       <textarea
