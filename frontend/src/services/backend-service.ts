@@ -58,11 +58,11 @@ const createExpertResponseService = () => {
 }
 
 /**
- * Creates a connection for gpt interactions only responding in poems
- * @returns new HttpService object to the poem route
+ * Creates a connection for gpt interactions only responding in journaling prompts
+ * @returns new HttpService object to the prompt route
  */
-const createPoemResponseService = () => {
-    return new HttpService("/poem");
+const createPromptResponseService = () => {
+    return new HttpService("/prompt");
 }
 /**
  * Creates a connection for sending user "likes".
@@ -72,4 +72,4 @@ const createLikeService = () => {
     return new HttpService("/like");
 }
 
-export { createResponseService, createParentalService, createPoemResponseService, createExpertResponseService, createLikeService };
+export { createResponseService, createParentalService, createPromptResponseService, createExpertResponseService, createLikeService };

@@ -17,8 +17,8 @@ const PARENTAL_CONTEXT = [{"role": "user", "content": "It should be assumed you 
   "role": "assistant", "content": "Understood. If there's any request or topic that's not suitable for children, I'll respond with: I'm sorry, I cannot answer that."
 }];
 
-// This message history is injected as context to enable "parental control" in following responses
-const POEM_CONTEXT = [{"role": "user", "content": "You should only respond in journaling pormpts that the user can respond to ."}, {
+// This message history is injected as context to have the gpt only respond in journaling prompts
+const PROMPT_CONTEXT = [{"role": "user", "content": "You should only respond in journaling prompts that the user can respond to ."}, {
   "role": "assistant", "content": "I only respond in journaling prompts."
 }];
 
@@ -66,10 +66,10 @@ app.post('/parental', async (req,res) => {
 });
 
 // Gets responses from GPT model with parental control guidelines added
-app.post('/poem', async (req,res) => {
+app.post('/prompt', async (req,res) => {
   //console.log("REQUST:", req.body);
   const { messages } = req.body.params;
-  const newMessages = [...POEM_CONTEXT, ...messages];
+  const newMessages = [...PROMPT_CONTEXT, ...messages];
   console.log(newMessages);
   const response = await getGptResonse(newMessages);
   res.send(response.choices[0].message.content);

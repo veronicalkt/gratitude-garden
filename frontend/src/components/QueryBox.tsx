@@ -9,10 +9,7 @@ import { z } from "zod";
 import { useState } from "react";
 import {
   // Backend model route options
-  createResponseService, // Default
-  createParentalService,
-  createExpertResponseService,
-  createPoemResponseService,
+  createPromptResponseService,
   createLikeService,
 } from "../services/backend-service";
 import ExpandableText from "./ExpandableText";
@@ -48,7 +45,7 @@ const QueryBox = () => {
     setIsLoading(true); // Triggers the loading animation
 
     // Creates post request for backend gpt model
-    const { request, cancel } = createPoemResponseService().post([
+    const { request, cancel } = createPromptResponseService().post([
       { role: "user", content: data.query },
     ]);
 
