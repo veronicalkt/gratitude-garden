@@ -3,9 +3,15 @@ import "./App.css";
 import plant1 from "./images/plant.png";
 import plant2 from "./images/plant2.png";
 import plant3 from "./images/plant3.png";
+import plant4 from "./images/plant4.png";
+import plant5 from "./images/plant5.png";
+import plant6 from "./images/plant6.png";
+import plant7 from "./images/plant7.png";
+import plant8 from "./images/plant8.png";
+import plant9 from "./images/plant9.png";
 import QueryBox from "./components/QueryBox";
 
-const plantImages = [plant1, plant2, plant3];
+const plantImages = [plant1, plant2, plant3, plant4, plant5, plant6, plant7, plant8, plant9];
 
 function App() {
   const [entries, setEntries] = useState<{ text: string; date: string }[]>([]);
@@ -60,13 +66,14 @@ function App() {
           <p key={index}>{`${entry.date}: ${entry.text}`}</p>
         ))}
       </div>
+      <h2>Garden</h2>
       {plantPositions.map((plant, index) => (
         <img
           key={index}
           src={plant.src}
           alt="Plant"
           style={{
-            position: 'absolute',
+            position: 'static',
             top: `${plant.top}px`,
             left: `${plant.left}px`,
             width: '100px', 
