@@ -92,7 +92,7 @@ const QueryBox = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         {error && <p className="text-danger">{error}</p>}
         <label htmlFor="query" className="form-label">
-          Ask me for a journaling prompt:
+          Provide words, feelings, ideas, etc for a journaling prompt you want:
         </label>
         <div className="mb-3 d-flex justify-content-between">
           <input

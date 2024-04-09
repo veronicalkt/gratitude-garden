@@ -9,9 +9,12 @@ import plant6 from "./images/plant6.png";
 import plant7 from "./images/plant7.png";
 import plant8 from "./images/plant8.png";
 import plant9 from "./images/plant9.png";
+import plant10 from "./images/plant10.png";
+import plant11 from "./images/plant11.png";
+import plant12 from "./images/plant12.png";
 import QueryBox from "./components/QueryBox";
 
-const plantImages = [plant1, plant2, plant3, plant4, plant5, plant6, plant7, plant8, plant9];
+const plantImages = [plant1, plant2, plant3, plant4, plant5, plant6, plant7, plant8, plant9, plant10, plant11, plant12];
 
 function App() {
   const [entries, setEntries] = useState<{ text: string; date: string }[]>([]);
